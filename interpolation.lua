@@ -23,7 +23,7 @@ end
 return function(_p_s)
   local __p_s = _p_s:gsub("{([^{}]+)}",function(_p_r) 
     if _p_r:sub(1,1)=="#"and _p_r:sub(#_p_r,#_p_r)=="#"then
-      return"{".._p_rr:sub(2,#_p_r-1).."}"
+      return"{".._p_r:sub(2,#_p_r-1).."}"
     end
     if _p_r==_p_r:match"[%w_]+"then
       return _G[_p_r]or tostring(dynamic(_p_r)or"")
