@@ -21,7 +21,7 @@ dynamic=function(n)
   end
 end
 return function(_p_s)
-  return _p_s:gsub("{([^{}]+)}",function(_p_r) 
+  local __p_s = _p_s:gsub("{([^{}]+)}",function(_p_r) 
     if _p_r:sub(1,1)=="#"and _p_r:sub(#_p_r,#_p_r)=="#"then
       return"{".._p_rr:sub(2,#_p_r-1).."}"
     end
@@ -37,4 +37,5 @@ return function(_p_s)
       return tostring(_p_r_c())
     end
   end)
+  return __p_s
 end
