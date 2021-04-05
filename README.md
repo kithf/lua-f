@@ -1,5 +1,5 @@
 # lua-f
-String interpolation in Lua
+String format and interpolation in Lua
 
 ## Interpolation
 
